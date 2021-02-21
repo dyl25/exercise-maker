@@ -1,6 +1,7 @@
 <template>
   <section class="section">
-    <exercise-form :handleSubmit="handleSubmit" />
+    <h2 class="title">Création d'un exercice</h2>
+    <exercise-form :form="form" :handleSubmit="handleSubmit" />
   </section>
 </template>
 
@@ -12,17 +13,21 @@ import ExerciseForm from '@/components/ExerciseForm.vue';
 export default {
   components: {
     ExerciseForm
-    
   },
 
   mounted() {
-    this.exercises = this.getExercises();
-    console.log(this.exercises);
   },
 
   data() {
     return {
-      exercises: [],
+      form: {
+        title: '',
+        explenation: '',
+        difficulty: null,
+        tags: [],
+        image: null,
+        video: null
+      }
     };
   },
 

@@ -1,6 +1,6 @@
 <template>
   <section class="section">
-    <exercise :exercise="exercise" v-for="exercise in exercises" :key="exercise.id">
+    <exercise :exercise="exercise" v-for="exercise in exercises" :key="exercise.id" />
   </section>
 </template>
 
